@@ -10,9 +10,12 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "next": "9.4.2",
+    "query-string": "^6.12.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "rxjs": "^6.5.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.8.0",
