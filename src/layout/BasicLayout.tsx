@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Sidebar from 'src/components/Sidebar'
+import Sidebar from '../components/Sidebar'
+import MobileMenuNavigation from '../components/MobileMenuNavigation'
 
 type Props = {
   children: React.ReactNode
@@ -13,6 +14,7 @@ function BasicLayout({ children, className }: Props) {
     <div className={className}>
       <Sidebar />
       <main>{children}</main>
+      <MobileMenuNavigation />
     </div>
   )
 }

@@ -1,10 +1,12 @@
 import React from 'react'
 import BasicLayout from 'src/layout/BasicLayout'
 
+import SectionTitle from '../../components/SectionTitle'
+
 function StocksPage() {
   return (
     <div>
-      <p>Stocks</p>
+      <SectionTitle>Stocks</SectionTitle>
     </div>
   )
 }

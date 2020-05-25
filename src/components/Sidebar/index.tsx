@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import NavLink from '../NavLink'
 
 type Props = {
   className: string
@@ -22,16 +23,16 @@ function Sidebar({ className }: Props) {
       </Link>
       <nav>
         <Link href='/'>
-          <a>News</a>
+          <NavLink>News</NavLink>
         </Link>
         <Link href='/stocks'>
-          <a>Stocks</a>
+          <NavLink>Stocks</NavLink>
         </Link>
         <Link href='/crypto'>
-          <a>Cryptocurrencies</a>
+          <NavLink>Cryptocurrencies</NavLink>
         </Link>
         <Link href='/forex'>
-          <a>Forex</a>
+          <NavLink>Forex</NavLink>
         </Link>
       </nav>
     </aside>
@@ -58,14 +59,5 @@ export default styled(Sidebar)`
     flex-direction: column;
     justify-content: space-between;
     padding-left: 60px;
-
-    a {
-      text-decoration: none;
-      color: var(--blue-2);
-
-      :hover {
-        text-decoration: underline;
-      }
-    }
   }
 `

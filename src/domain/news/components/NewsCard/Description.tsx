@@ -14,5 +14,10 @@ function Description({ className, children }: Props) {
 }
 
 export default styled(Description)`
+  display: none;
   font-size: 12px;
+
+  @media (min-width: 768px) {
+    display: inline-flex;
+  }
 `

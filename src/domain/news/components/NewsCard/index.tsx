@@ -20,8 +20,12 @@ const Title = styled.p`
 `
 
 const Image = styled.img`
-  width: 200px;
+  width: 120px;
   margin-right: 16px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
 `
 
 function NewsCard({ className, news }: Props) {
