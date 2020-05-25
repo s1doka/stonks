@@ -14,4 +14,9 @@
 body {
   font-family: 'Rubik', sans-serif;
   background-color: var(--gray-1);
+  height: 100vh;
+}
+
+#next {
+  height: 100vh;
 }

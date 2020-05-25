@@ -19,11 +19,12 @@ function BasicLayout({ children, className }: Props) {
 
 export default styled(BasicLayout)`
   display: flex;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
 
   main {
     width: 90%;
+    height: 100%;
     margin: 0 auto;
 
     @media (min-width: 1140px) {

@@ -1,14 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import BasicLayout from 'src/layout/BasicLayout'
-import CryptoExchangeList from 'src/domain/crypto-currencies/components/CryptoExchangeList'
-import CryptoExchangeSymbols from 'src/domain/crypto-currencies/components/CryptoExchangeSymbols'
+import NewsList from '../domain/news/components/NewsList'
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @media (min-width: 1140px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`
 
 function Homepage() {
   return (
     <div>
-      <h1>Homepage</h1>
-      <CryptoExchangeList />
-      {/*<CryptoExchangeSymbols />*/}
+      <Grid>
+        <NewsList />
+      </Grid>
     </div>
   )
 }
