@@ -1,6 +1,9 @@
 import React from 'react'
 import { AppProps } from 'next/app'
 
+import 'normalize.css'
+import 'public/global.css'
+
 function Noop({ children }) {
   return children
 }

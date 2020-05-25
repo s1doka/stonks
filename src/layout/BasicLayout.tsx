@@ -1,17 +1,33 @@
 import React from 'react'
-import Header from 'src/components/Header'
+import styled from 'styled-components'
+
+import Sidebar from 'src/components/Sidebar'
 
 type Props = {
   children: React.ReactNode
+  className: string
 } & React.FunctionComponent
 
-function BasicLayout({ children }: Props) {
+function BasicLayout({ children, className }: Props) {
   return (
-    <>
-      <Header />
+    <div className={className}>
+      <Sidebar />
       <main>{children}</main>
-    </>
+    </div>
   )
 }
 
-export default BasicLayout
+export default styled(BasicLayout)`
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  main {
+    width: 90%;
+    margin: 0 auto;
+
+    @media (min-width: 1140px) {
+      width: 1140px;
+    }
+  }
+`
