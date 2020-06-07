@@ -6,20 +6,17 @@ import Link from 'next/link'
 import NavLink from '../../../../components/NavLink'
 import Flexbox from '../../../../components/Flexbox'
 import CryptoExchangesCard from '../CryptoExchangesCard'
+import { LoadingPlaceholder } from '../CryptoExchangesCard/LoadingPlaceholder'
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
-
-  @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
-  }
 `
 
 function CryptoExchangeList() {
   let {
-    state: { exchanges },
+    state: { exchanges, status },
     getExchanges
   } = useFetchCryptoExchange(6)
 
@@ -38,13 +35,26 @@ function CryptoExchangeList() {
         </Link>
       </Flexbox>
       <Grid>
-        {exchanges.map((exchange, index) => (
-          <CryptoExchangesCard
-            exchange={exchange}
-            key={index}
-            data-testid={`exchange-${index}`}
-          />
-        ))}
+        {status === 'LOADING' ? (
+          <>
+            <LoadingPlaceholder />
+            <LoadingPlaceholder />
+            <LoadingPlaceholder />
+            <LoadingPlaceholder />
+            <LoadingPlaceholder />
+            <LoadingPlaceholder />
+          </>
+        ) : (
+          <>
+            {exchanges.map((exchange, index) => (
+              <CryptoExchangesCard
+                exchange={exchange}
+                key={index}
+                data-testid={`exchange-${index}`}
+              />
+            ))}
+          </>
+        )}
       </Grid>
     </div>
   )
