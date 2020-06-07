@@ -1,4 +1,4 @@
-import { get } from 'src/services/HttpService'
+import { get } from '../../../services/HttpService'
 
 import {
   CryptoCurrencyCandle,

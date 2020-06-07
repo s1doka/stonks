@@ -5,6 +5,9 @@ import { StockExchange } from '../../support/types'
 import SectionTitle from '../../../../components/SectionTitle'
 import { getStockExchanges } from '../../services'
 import StocksExchangeCard from '../StocksExchangesCard'
+import Link from 'next/link'
+import NavLink from '../../../../components/NavLink'
+import Flexbox from '../../../../components/Flexbox'
 
 const Grid = styled.div`
   display: grid;
@@ -23,7 +26,7 @@ function StocksExchangeList() {
     async function fetch() {
       try {
         let data = await getStockExchanges()
-        let exchanges = data.slice(0, 5)
+        let exchanges = data.slice(0, 6)
 
         setExchanges(exchanges)
       } catch (error) {
@@ -36,7 +39,12 @@ function StocksExchangeList() {
 
   return (
     <div>
-      <SectionTitle>Stock exchanges</SectionTitle>
+      <Flexbox alignItems='center' justifyContent='space-between'>
+        <SectionTitle>Stock exchanges</SectionTitle>
+        <Link href='/stocks'>
+          <NavLink>See all</NavLink>
+        </Link>
+      </Flexbox>
       <Grid>
         {exchanges.map((exchange, index) => (
           <StocksExchangeCard key={index} exchange={exchange} />

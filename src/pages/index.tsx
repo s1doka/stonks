@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import BasicLayout from '../layout/BasicLayout'
 import NewsList from '../domain/news/components/NewsList'
+import StocksExchangeList from '../domain/stocks/components/StocksExchangesList'
+import CryptoExchangeList from '../domain/crypto-currencies/components/CryptoExchangeList'
 
 const Grid = styled.div`
   display: grid;
@@ -19,6 +21,10 @@ function Homepage() {
     <div>
       <Grid>
         <NewsList />
+        <div>
+          <StocksExchangeList />
+          <CryptoExchangeList />
+        </div>
       </Grid>
     </div>
   )
