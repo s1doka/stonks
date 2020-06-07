@@ -33,7 +33,9 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-export function useFetchCryptoExchange(): {
+export function useFetchCryptoExchange(
+  limit?: number
+): {
   state: State
   getExchanges: HookFunction
 } {
@@ -47,7 +49,7 @@ export function useFetchCryptoExchange(): {
 
       dispatch({
         type: 'SUCCESS_FETCH_EXCHANGES',
-        payload: data
+        payload: limit ? data.slice(0, limit) : data
       })
     } catch (error) {
       dispatch({ type: 'ERROR_FETCH_EXCHANGES', error: 'Sorry about that!' })
