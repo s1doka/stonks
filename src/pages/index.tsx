@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import BasicLayout from 'src/layout/BasicLayout'
+import BasicLayout from '../layout/BasicLayout'
 import NewsList from '../domain/news/components/NewsList'
 
 const Grid = styled.div`

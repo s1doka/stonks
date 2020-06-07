@@ -1,5 +1,5 @@
 import React from 'react'
-import BasicLayout from 'src/layout/BasicLayout'
+import BasicLayout from '../../layout/BasicLayout'
 
 import SectionTitle from '../../components/SectionTitle'
 
