@@ -7,9 +7,9 @@ type Props = {
   exchange: CryptoCurrencyExchange
 }
 
-function CryptoExchangesCard({ exchange }: Props) {
+function CryptoExchangesCard({ exchange, ...props }: Props) {
   return (
-    <Card>
+    <Card {...props}>
       <Link href={`/stocks/${exchange}`}>
         <a>{exchange}</a>
       </Link>
