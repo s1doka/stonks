@@ -23,7 +23,7 @@ function Sidebar({ className }: Props) {
       </Link>
       <nav>
         <Link href='/'>
-          <NavLink>News</NavLink>
+          <NavLink>Home</NavLink>
         </Link>
         <Link href='/stocks'>
           <NavLink>Stocks</NavLink>
